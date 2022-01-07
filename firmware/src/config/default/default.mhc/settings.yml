@@ -1,0 +1,14 @@
+configName: default
+folderName: Samnl21_ok
+format_version: v1.0
+frameworkPath: ..\..\Harmony3
+processor: ATSAML21J18B
+projectName: Samnl21_ok
+settings:
+  PackageFilter: bsp;classb_sam_e5x_d5x;core;core_apps_sam_d5x_e5x;core_apps_sam_l21;csp;csp_apps_sam_l10_l11;csp_apps_sam_l21;csp_apps_sam_l22;dev_packs;quick_docs;usb
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: .\dev_packs\arm\CMSIS\5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: .\dev_packs\Microchip\SAML21_DFP\3.5.87\saml21b\atdf\ATSAML21J18B.atdf
