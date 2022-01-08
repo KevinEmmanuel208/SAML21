@@ -34,7 +34,7 @@
 // *****************************************************************************
 //LED_turn_on(LED_EQUIPMENT);
 
-
+uint8_t bufferTx[]= {0xAA,0xFF,0x11,0x00,0x23};
 static bool volatile led_status =0;
 
 void TIMER_handler(TC_TIMER_STATUS status, uintptr_t context)
@@ -49,13 +49,12 @@ int main ( void )
     
     TC2_TimerStart();
     
-TC2_TimerCallbackRegister( TIMER_handler, (uintptr_t)NULL );
+    SERCOM3_USART_Write(&bufferTx,sizeof(bufferTx));
+    
+    TC2_TimerCallbackRegister( TIMER_handler, (uintptr_t)NULL );
 
     while ( true )
     {
-        //LED_Toggle();
-        //LED_OutputEnable();
-      //  LED_Clear();
         if(led_status)
         {
             led_status = false;

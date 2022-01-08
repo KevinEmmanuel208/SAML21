@@ -74,6 +74,14 @@
 #define LED_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 10U)) & 0x01U)
 #define LED_PIN                  PORT_PIN_PB10
 
+/*** Macros for UART_Tx pin ***/
+#define UART_Tx_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 22U)) & 0x01U)
+#define UART_Tx_PIN                  PORT_PIN_PA22
+
+/*** Macros for UART_Rx pin ***/
+#define UART_Rx_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 23U)) & 0x01U)
+#define UART_Rx_PIN                  PORT_PIN_PA23
+
 // *****************************************************************************
 /* PORT Group
 
